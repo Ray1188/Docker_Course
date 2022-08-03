@@ -1,4 +1,14 @@
 docker images
 docker ps
 docker ps -a
-new command
+
+docker stop feedback-app
+docker volume ls
+
+docker build -t image_name .
+-t - set name for an imaage
+
+docker run -p 3000:80 -d --name feedback-app --rm image_name
+
+docker run -d -p 3000:80 --rm --name feedback-app -v feedback:/app/feedback feedback-node:volumes  - add named volume. feedback: name of volume
+'/app/feedback' path inside container, this data we want to save

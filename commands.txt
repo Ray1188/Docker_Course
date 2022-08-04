@@ -21,4 +21,8 @@ docker run -d -p 3000:80 --rm --name feedback-app -v feedback:/app/feedback feed
         Windows: -v "%cd%":/app
         docker run -d -p 3000:80 --name feedback-app -v feedback:/app/feedback -v "/home/yuron/Docker_Course/data-volumes-01-starting-setup:/app" feedback-node:volumes
      
-    it is the same as we add VOLUME ["/app/node_modules"] in Dockerfile  
+    it is the same as we add VOLUME ["/app/node_modules"] in Dockerfile 
+
+ # container
+ docker stop feedback-app
+ docker start feedback-app     
